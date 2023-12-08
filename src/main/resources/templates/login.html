@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bejelentkezés</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class = "container">
+    <div class = "green">
+        <h1 class = "title">LÉGY RÉSZESE ÉS <br><strong>SZAVAZZ</strong><br> TE IS!</h1>
+    </div>
+    <div class = "form">
+        <h1>Bejelentkezés</h1>
+        <form method = "post" action = "#" th:action = "@{/}" th:object = "${loginForm}">
+            <label for = "username" >Felhasználónév:
+                <br><input type = "text" id = "username" th:field = "*{username}"><br>
+                <span class = "errors" th:if = "${#fields.hasErrors('username')}" th:text="${usernameError}">error</span>
+            </label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <label for = "password" >Jelszó:
+                <br><input type = "password" id = "password" th:field = "*{password}"><br>
+                <span class = "errors" th:if = "${#fields.hasErrors('password')}"  th:text="${passwordError}" >error</span>
+            </label>
+            <span class="errors"  th:text = "${error}">error</span>
+            <br>
+            <br>
+            <input type = "submit" value = "Belépés">
+            <br>
+            <br>
+            <h4>Még nincs fiókod? <a href = "/register">Regisztrálj itt.</a></h4>
+
+        </form>
+    </div>
+
+</div>
+
+
+</body>
+</html>

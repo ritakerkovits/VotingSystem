@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Make sure the html and body are also 100% high */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container > div {
+    width: 50%; /* Split the width equally */
+    display: flex;
+    align-items: center; /* Center children vertically */
+    justify-content: center; /* Center children horizontally */
+}
+
+.green {
+    background: #18392B;
+    color: white; /* Set text color for contrast */
+}
+
+.white {
+    background: #F5F5F5;
+    color: #18392B; /* Set text color for contrast */
+}
+
+
+.box-green {
+    text-align: center;
+    background-color: #18392B;
+}
+.box-white {
+    text-align: center;
+    background-color: #F5F5F5;
+}
+
+
+.white-text:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.green-lower-text:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.green-text:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.white-text{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #F5F5F5;
+    font-family: Garamond;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.green-text{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #18392B;
+    font-family: Garamond;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+
+a:link{
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+div {
+    cursor:text;
+}
+
+
